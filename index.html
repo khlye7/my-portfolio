@@ -3,74 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Khloe's Profile</title>
+  <title>Game Dev Portfolio - Home</title>
   <style>
-    /* Full height and pink background */
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background-color: #ffd6e8; /* Light pink background */
+    body {
+      background-color: #ffd6e8;
       font-family: 'Brush Script MT', cursive, sans-serif;
-      color: #a83279; /* Dark pink text */
+      color: #a83279;
+      margin: 0; padding: 40px;
+      text-align: center;
+      min-height: 100vh;
+      position: relative;
       overflow-x: hidden;
     }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-      box-sizing: border-box;
-      position: relative;
-      min-height: 100vh;
-      z-index: 1;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px #fff;
-      z-index: 2;
-    }
-
-    .profile-info {
-      max-width: 600px;
-      font-size: 1.3rem;
-      background: #ffe5f0;
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 15px #f7c0de;
-      text-align: left;
-      z-index: 2;
-      position: relative;
+    nav {
+      background: #a83279;
+      padding: 12px 20px;
       margin-bottom: 30px;
-    }
-
-    .profile-info p {
-      margin: 15px 0;
-    }
-
-    a {
-      color: #a83279;
-      font-weight: bold;
-      font-size: 1.3rem;
-      text-decoration: none;
-      border: 2px solid #a83279;
-      padding: 10px 25px;
       border-radius: 12px;
-      transition: background-color 0.3s, color 0.3s;
-      z-index: 2;
-      display: inline-block;
+      font-size: 1.2rem;
     }
-
-    a:hover {
-      background-color:rgb(255, 235, 247);
+    nav a {
       color: #ffd6e8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-    /* Flower container */
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 3.8rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+      text-shadow: 1px 1px 1px #ffe1f2;
+    }
     #flower-container {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
@@ -79,8 +51,6 @@
       z-index: 0;
       background: transparent;
     }
-
-    /* Flower styling and animation */
     .flower {
       position: absolute;
       width: 40px;
@@ -90,7 +60,6 @@
       animation-timing-function: linear;
       animation-iteration-count: infinite;
     }
-
     @keyframes fall {
       0% {
         transform: translateY(-50px) rotate(0deg);
@@ -105,21 +74,26 @@
 </head>
 <body>
 
-  <h1>Khloe's Profile</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Game Collection</a>
+    <a href="docs.html">Design Docs</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="reflection.html">Reflection</a>
+  </nav>
 
-  <div class="profile-info">
-    <p><strong>Name:</strong> [Your Name Here]</p>
-    <p><strong>About Me:</strong> [Write something about yourself]</p>
-    <p><strong>Contact:</strong> [Your email or social links]</p>
-  </div>
-
-  <a href="index.html">Back to Home</a>
+  <h1>Welcome to My Game Dev Portfolio</h1>
+  <p>
+    Hello! I am khloe, a passionate aspiring game designer.<br />
+    My career goal is to create immersive and innovative games that inspire and entertain.<br />
+    This portfolio showcases my skills, projects, and growth over time.<br />
+    Explore to see my journey in game design!
+  </p>
 
   <div id="flower-container"></div>
 
   <script>
     const flowerContainer = document.getElementById('flower-container');
-
     function createFlower() {
       const flower = document.createElement('div');
       flower.classList.add('flower');
@@ -131,7 +105,6 @@
       flowerContainer.appendChild(flower);
       flower.addEventListener('animationend', () => flower.remove());
     }
-
     setInterval(createFlower, 300);
   </script>
 
