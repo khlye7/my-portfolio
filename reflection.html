@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Dev Portfolio - Reflection</title>
+  <style>
+    body {
+      background-color: #ffd6e8;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      color: #a83279;
+      margin: 0; padding: 40px;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav {
+      background: #a83279;
+      padding: 12px 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    nav a {
+      color: #ffd6e8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 25px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    section {
+      background: #ffe5f0;
+      border-radius: 20px;
+      padding: 30px 35px;
+      box-shadow: 0 0 12px #f7c0de;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      font-size: 1.3rem;
+      color: #7f1e5a;
+    }
+    #flower-container {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+      background: transparent;
+    }
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://i.postimg.cc/YqW4dZ43/flower.png') no-repeat center/contain;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Game Collection</a>
+    <a href="docs.html">Design Docs</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="reflection.html">Reflection</a>
+  </nav>
+
+  <h1>Reflection & Professionalism</h1>
+
+  <section>
+    <h2>Career Goals</h2>
+    <p>
+      I aspire to become a professional game designer focused on creating inclusive and engaging experiences. My goal is to continually learn new tools and techniques, collaborate effectively, and deliver high-quality games that resonate with diverse audiences.
+    </p>
+  </section>
+
+  <section>
+    <h2>Professional Skills</h2>
+    <p>
+      Through my projects, I have gained skills in Unity, C#, version control with Git, project management, teamwork, and iterative design. I understand the importance of feedback and reflection in improving my work.
+    </p>
+  </section>
+
+  <section>
+    <h2>Project Reflection</h2>
+    <p>
+      This portfolio represents my journey of growth as a game developer. Challenges in programming, design, and testing have taught me resilience and problem-solving. I look forward to continuing to evolve my craft.
+    </p>
+  </section>
+
+  <div id="flower-container"></div>
+  <script>
+    const flowerContainer = document.getElementById('flower-container');
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (6 + Math.random() * 6) + 's';
+      const size = 30 + Math.random() * 20;
+      flower.style.width = size + 'px';
+      flower.style.height = size + 'px';
+      flowerContainer.appendChild(flower);
+      flower.addEventListener('animationend', () => flower.remove());
+    }
+    setInterval(createFlower, 300);
+  </script>
+
+</body>
+</html>
