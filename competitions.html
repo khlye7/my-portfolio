@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Dev Portfolio - Competitions</title>
+  <style>
+    body {
+      background-color: #ffd6e8;
+      font-family: 'Brush Script MT', cursive, sans-serif;
+      color: #a83279;
+      margin: 0; padding: 40px;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    nav {
+      background: #a83279;
+      padding: 12px 20px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    nav a {
+      color: #ffd6e8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 2px #fff;
+    }
+    .competition {
+      background: #ffe5f0;
+      border-radius: 20px;
+      padding: 25px 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 12px #f7c0de;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .competition h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+    .competition img, .competition video {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 8px #f7c0de;
+    }
+    .caption {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #8a205a;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+    #flower-container {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+      background: transparent;
+    }
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: url('https://i.postimg.cc/YqW4dZ43/flower.png') no-repeat center/contain;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Game Collection</a>
+    <a href="docs.html">Design Docs</a>
+    <a href="competitions.html">Competitions</a>
+    <a href="reflection.html">Reflection</a>
+  </nav>
+
+  <h1>Creative Projects & Competitions</h1>
+
+  <div class="competition">
+    <h2>Games for Change (G4C) Submission</h2>
+    <img src="your-g4c-entry.png" alt="G4C project screenshot" />
+    <p class="caption">This game addressed social awareness themes. It was a challenge to design engaging mechanics while conveying a meaningful message. Feedback helped improve gameplay flow and narrative.</p>
+  </div>
+
+  <div class="competition">
+    <h2>Emoticon CS Fair Entry</h2>
+    <img src="your-emoticon-entry.png" alt="Emoticon CS Fair project screenshot" />
+    <p class="caption">Participating in this competition encouraged creativity and teamwork. The project combined art and programming to create an emotional storytelling experience.</p>
+  </div>
+
+  <div id="flower-container"></div>
+  <script>
+    const flowerContainer = document.getElementById('flower-container');
+    function createFlower() {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (6 + Math.random() * 6) + 's';
+      const size = 30 + Math.random() * 20;
+      flower.style.width = size + 'px';
+      flower.style.height = size + 'px';
+      flowerContainer.appendChild(flower);
+      flower.addEventListener('animationend', () => flower.remove());
+    }
+    setInterval(createFlower, 300);
+  </script>
+
+</body>
+</html>
