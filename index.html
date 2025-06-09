@@ -4,11 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Dev Portfolio - Home</title>
+
+  <!-- Google Font: Petit Formal Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      background-color: #ffd6e8;
-      font-family: 'Brush Script MT', cursive, sans-serif;
-      color: #a83279;
+      background: linear-gradient(135deg, #ffd6e8 0%, #ffeaf2 100%);
+      font-family: 'Petit Formal Script', cursive, serif;
+      color: #b33a70; /* deeper pink */
       margin: 0; padding: 40px;
       text-align: center;
       min-height: 100vh;
@@ -16,32 +20,35 @@
       overflow-x: hidden;
     }
     nav {
-      background: #a83279;
+      background: #b33a70; /* deeper pink */
       padding: 12px 20px;
       margin-bottom: 30px;
       border-radius: 12px;
       font-size: 1.2rem;
     }
     nav a {
-      color: #ffd6e8;
+      color: #ffe4f0; /* soft pale pink */
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #ffd6e8;
     }
     h1 {
       font-size: 3.8rem;
       margin-bottom: 10px;
-      text-shadow: 1px 1px 2px #fff;
+      text-shadow: 1px 1px 2px #fff1f7;
     }
     p {
       font-size: 1.4rem;
       max-width: 700px;
       margin: 20px auto;
       line-height: 1.6;
-      text-shadow: 1px 1px 1px #ffe1f2;
+      text-shadow: 1px 1px 1px #fff0f7;
+      color: #9e2e64;
     }
     #flower-container {
       position: fixed;
@@ -55,7 +62,7 @@
       position: absolute;
       width: 40px;
       height: 40px;
-      background: url('https://i.postimg.cc/YqW4dZ43/flower.png') no-repeat center/contain;
+      background: url('https://pngimg.com/uploads/flower/flower_PNG93362.png') no-repeat center/contain;
       animation-name: fall;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
