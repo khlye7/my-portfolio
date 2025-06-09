@@ -4,69 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Dev Portfolio - Game Collection</title>
+
+  <!-- Emily's Candy Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      background-color: #ffd6e8;
-      font-family: 'Brush Script MT', cursive, sans-serif;
-      color: #a83279;
-      margin: 0; padding: 40px;
+      background: linear-gradient(135deg, #ffb6d9 0%, #ffd1e8 100%);
+      font-family: 'Emilys Candy', cursive;
+      color: #d81e6f; /* bright pink */
+      margin: 0; 
+      padding: 40px;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
+      text-align: center;
     }
     nav {
-      background: #a83279;
+      background: #d81e6f; /* bright pink */
       padding: 12px 20px;
       margin-bottom: 30px;
       border-radius: 12px;
-      font-size: 1.2rem;
-      text-align: center;
+      font-size: 1.6rem;
+      font-family: 'Emilys Candy', cursive;
     }
     nav a {
-      color: #ffd6e8;
+      color: #ffe6f1;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: normal;
+      letter-spacing: 1.5px;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #ff85b1; /* bubblegum pink */
     }
     h1 {
-      font-size: 3.2rem;
+      font-size: 3.8rem;
       margin-bottom: 20px;
+      text-shadow: 1px 1px 2px #ffe4f3;
       text-align: center;
-      text-shadow: 1px 1px 2px #fff;
     }
     .project {
       background: #ffe5f0;
       border-radius: 20px;
       padding: 25px 30px;
       margin-bottom: 25px;
-      box-shadow: 0 0 12px #f7c0de;
+      box-shadow: 0 0 12px #ff8fc4;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
+      font-family: 'Emilys Candy', cursive;
+      color: #b32c6a;
+      font-size: 1.5rem;
     }
     .project h2 {
       margin-top: 0;
       margin-bottom: 10px;
-      font-size: 2rem;
+      font-size: 2.4rem;
       text-decoration: underline;
+      color: #d81e6f;
     }
     .project img, .project video {
       max-width: 100%;
       border-radius: 15px;
       margin-top: 10px;
       margin-bottom: 10px;
-      box-shadow: 0 0 8px #f7c0de;
+      box-shadow: 0 0 8px #ffb6d9;
     }
     .caption {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
-      color: #8a205a;
+      color: #9b1c58;
       margin-top: 10px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     #flower-container {
       position: fixed;
@@ -80,7 +93,7 @@
       position: absolute;
       width: 40px;
       height: 40px;
-      background: url('https://i.postimg.cc/YqW4dZ43/flower.png') no-repeat center/contain;
+      background: url('https://pngimg.com/uploads/flower/flower_PNG93362.png') no-repeat center/contain;
       animation-name: fall;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -128,6 +141,7 @@
   </div>
 
   <div id="flower-container"></div>
+
   <script>
     const flowerContainer = document.getElementById('flower-container');
     function createFlower() {
