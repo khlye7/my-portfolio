@@ -84,7 +84,17 @@
       width: 180px;
       border-radius: 12px;
       box-shadow: 0 0 10px #ffb6c1;
-      margin-top: 20px;
+    }
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .text-content {
+      max-width: 500px;
     }
   </style>
 </head>
@@ -97,16 +107,25 @@
     <a href="reflection.html">Reflection</a>
   </nav>
 
-  <h2>Welcome to My Game Dev Portfolio</h2>
-  <p>
-    Hello! I am Khloe, a passionate aspiring game designer.<br />
-    My career goal is to create immersive and innovative games that inspire and entertain.<br />
-    This portfolio showcases my skills, projects, and growth over time.<br />
-    Explore to see my journey in game design!
-  </p>
+  <div class="flex-container">
+    <div class="text-content">
+      <h2>Welcome to My Game Dev Portfolio</h2>
+      <p>
+        Hello! I am Khloe, a passionate aspiring game designer.<br />
+        My career goal is to create immersive and innovative games that inspire and entertain.<br />
+        This portfolio showcases my skills, projects, and growth over time.<br />
+        Explore to see my journey in game design!
+      </p>
+    </div>
 
-  <img src="khloe-pic.jpg" alt="Khloe" class="khloe-pic">
+    <img src="khloe-pic.jpg" alt="Khloe" class="khloe-pic">
+  </div>
 
   <div id="flower-container"></div>
 
   <script>
+    // Optional JavaScript animation script or effects
+  </script>
+
+</body>
+</html>
