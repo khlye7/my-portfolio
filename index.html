@@ -80,6 +80,12 @@
         opacity: 0;
       }
     }
+    .khloe-pic {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ffb6c1;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -87,7 +93,6 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="portfolio.html">Game Collection</a>
-    <a href="docs.html">Design Docs</a>
     <a href="competitions.html">Competitions</a>
     <a href="reflection.html">Reflection</a>
   </nav>
@@ -100,23 +105,8 @@
     Explore to see my journey in game design!
   </p>
 
+  <img src="khloe-pic.jpg" alt="Khloe" class="khloe-pic">
+
   <div id="flower-container"></div>
 
   <script>
-    const flowerContainer = document.getElementById('flower-container');
-    function createFlower() {
-      const flower = document.createElement('div');
-      flower.classList.add('flower');
-      flower.style.left = Math.random() * 100 + 'vw';
-      flower.style.animationDuration = (6 + Math.random() * 6) + 's';
-      const size = 30 + Math.random() * 20;
-      flower.style.width = size + 'px';
-      flower.style.height = size + 'px';
-      flowerContainer.appendChild(flower);
-      flower.addEventListener('animationend', () => flower.remove());
-    }
-    setInterval(createFlower, 300);
-  </script>
-
-</body>
-</html>
