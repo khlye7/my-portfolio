@@ -4,78 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Game Dev Portfolio - Reflection</title>
+
+  <!-- Emily's Candy Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet" />
+
   <style>
     body {
-      background-color: #ffd6e8;
-      font-family: 'Brush Script MT', cursive, sans-serif;
-      color: #a83279;
-      margin: 0; padding: 40px;
+      background: linear-gradient(135deg, #ffd6e8 0%, #ffeaf2 100%);
+      font-family: 'Emilys Candy', cursive;
+      color: #b33a70;
+      margin: 0; 
+      padding: 40px;
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      text-align: center;
     }
     nav {
-      background: #a83279;
+      background: #b33a70;
       padding: 12px 20px;
       margin-bottom: 30px;
       border-radius: 12px;
-      font-size: 1.2rem;
-      text-align: center;
+      font-size: 1.6rem;
     }
     nav a {
-      color: #ffd6e8;
+      color: #ffe4f0;
       margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: normal;
+      letter-spacing: 1.5px;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       text-decoration: underline;
+      color: #ffd6e8;
     }
     h1 {
-      font-size: 3.2rem;
+      font-size: 3.6rem;
       margin-bottom: 25px;
-      text-align: center;
-      text-shadow: 1px 1px 2px #fff;
+      text-shadow: 1px 1px 2px #fff1f7;
     }
     section {
       background: #ffe5f0;
       border-radius: 20px;
       padding: 30px 35px;
-      box-shadow: 0 0 12px #f7c0de;
+      box-shadow: 0 0 12px #ffb6d9;
       margin-bottom: 30px;
       line-height: 1.6;
-      font-size: 1.3rem;
-      color: #7f1e5a;
+      font-size: 1.4rem;
+      color: #9e2e64;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
     }
-    #flower-container {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-      background: transparent;
-    }
-    .flower {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      background: url('https://i.postimg.cc/YqW4dZ43/flower.png') no-repeat center/contain;
-      animation-name: fall;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-    @keyframes fall {
-      0% {
-        transform: translateY(-50px) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0;
-      }
+    section h2 {
+      color: #b33a70;
+      font-size: 2.2rem;
+      margin-top: 0;
     }
   </style>
 </head>
@@ -111,23 +97,6 @@
       This portfolio represents my journey of growth as a game developer. Challenges in programming, design, and testing have taught me resilience and problem-solving. I look forward to continuing to evolve my craft.
     </p>
   </section>
-
-  <div id="flower-container"></div>
-  <script>
-    const flowerContainer = document.getElementById('flower-container');
-    function createFlower() {
-      const flower = document.createElement('div');
-      flower.classList.add('flower');
-      flower.style.left = Math.random() * 100 + 'vw';
-      flower.style.animationDuration = (6 + Math.random() * 6) + 's';
-      const size = 30 + Math.random() * 20;
-      flower.style.width = size + 'px';
-      flower.style.height = size + 'px';
-      flowerContainer.appendChild(flower);
-      flower.addEventListener('animationend', () => flower.remove());
-    }
-    setInterval(createFlower, 300);
-  </script>
 
 </body>
 </html>
